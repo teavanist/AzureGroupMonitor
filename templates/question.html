@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title goes here</title>
+</head>
+<body>
+    <h1>Question page</h1>
+    <h2>selected question is {{ question }}</h2>
+    <p>
+        Go 
+        <a href="{{ url_for('index')}}">homelink</a>
+    </p>
+    <h1>Form</h1>
+    <form action="" method="POST">
+        {{ form.hidden_tag()}}
+        <p>
+            {% for option in form.answer %}
+                {{option}} {{option.label}} <br>
+            {% endfor %}
+        </p>
+        {{form.submit}}
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Azure Group Monitor</title>
+</head>
+<body >
+    <h3 class="text-3xl font-extrabold dark:text-white">Azure AD group changes</h2>
+    
+    <div class="overflow-x-auto relative">
+        <table class="w-full text-l text-left text-gray-500 dark:text-gray-400 border-b">
+            <thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  border-b">                
+                <tr>
+                    <th scope="col" class="py-3 px-6  border-b">
+                        Date
+                    </th>
+                    <th scope="col" class="py-3 px-6  border-b">
+                        Action
+                    </th>
+                    <th scope="col" class="py-3 px-6  border-b">
+                        Activity
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for action in  actions_overview %}
+
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700  border-b">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {{action["activitydatetime"] }}
+                    </th>
+                    <td class="py-4 px-6">
+                        {{action["activitydisplayname"] }}
+                    </td>
+                    <td class="py-4 px-6">
+                        {{action["interpretation"] }}
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
