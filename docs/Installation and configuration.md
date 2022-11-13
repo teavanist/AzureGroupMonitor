@@ -2,10 +2,10 @@
 # Installation and configuration guide 
 This installation guide covers all steps from installation to configuration to get Azure Group Monitor started. 
 
-## STEP 1: Clone the repo 
+## STEP 1: Clone this repo 
 
 ```
-git clone repolink 
+git clone https://github.com/teavanist/AzureGroupMonitor.git 
 ```
 
 ## STEP 2: Installing pre-requisites 
