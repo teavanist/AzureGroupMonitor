@@ -1,6 +1,4 @@
 from flask import Flask,render_template, request, redirect,url_for,flash
-from flask_wtf import Form 
-from wtforms.fields import RadioField, SubmitField
 from datetime import datetime
 from common import getAzureConfig, writeToJSON, logger, getLogFileSavePath, getInterval, getSecretKey
 import pandas as pd
